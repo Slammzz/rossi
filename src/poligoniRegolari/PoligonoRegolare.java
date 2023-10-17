@@ -30,4 +30,10 @@ public class PoligonoRegolare {
     public float perimetro(){
         return nLati*lLati;
     }
+    /*
+    public float area(){
+
+    }
+
+     */
 }

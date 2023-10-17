@@ -29,8 +29,19 @@ public class GestionePoligoni {
         public String toString() {
             String s = "";
             for (int i = 0; i < dimLogica; i++) {
-                s += arrPoligoni[i].toString();
+                s += arrPoligoni[i].toString() + "\n ";
             }
+
             return s;
         }
+
+        public float perimentro(int i){
+            return arrPoligoni[i].perimetro();
+        }
+        /*
+        public float area(int i){
+            return arrPoligoni[i].area();
+        }
+
+         */
     }
