@@ -31,13 +31,13 @@ public class Quadrato extends PoligonoRegolare {
         for (int i = 0; i < getLLati(); i++) {
             if (i == 0 || i == getLLati()-1) {
                 for (int j = 0; j < getLLati(); j++) {
-                    disegno += s;
+                    disegno += s + " ";
                 }
                 disegno += "\n";
             } else {
-                disegno += s;
+                disegno += s+" ";
                 for (int r = 0; r < getLLati() - 2; r++) {
-                    disegno = disegno + " ";
+                    disegno = disegno + "  ";
                 }
                 disegno = disegno + s + "\n";
 

@@ -9,7 +9,7 @@ public class TestPoligoniRegolari {
         Rombo r1 = new Rombo(5, 11,9);
         Pentagono p1 = new Pentagono(2);
         Esagono e1 = new Esagono(23);
-        g1.inserisciPoligono(q1);
+        g1.inserisciPoligono(q1);g1.inserisciPoligono(q1);
         g1.inserisciPoligono(r1);
         g1.inserisciPoligono(p1);
         g1.inserisciPoligono(e1);
