@@ -32,5 +32,6 @@ public abstract class PoligonoRegolare {
     }
 
     public abstract float area();
+    public abstract String disegno(char s);
 
 }

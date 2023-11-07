@@ -20,4 +20,7 @@ public class Pentagono extends PoligonoRegolare{
     public String toString(){
         return "Pentagono con lunghezza lati: "+getLLati();
     }
+    public String disegno(char s){
+        return " ";
+    }
 }

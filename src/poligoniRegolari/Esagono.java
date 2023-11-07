@@ -19,4 +19,25 @@ public class Esagono extends PoligonoRegolare{
     public String toString(){
         return "Esagono con lunghezza lati: "+getLLati();
     }
+
+    public String disegno(char s) {
+        int lato = (int)getLLati();
+        String riga="";
+        for (int i = 0; i < lato; i++) {
+            String spaziIniziali = "";
+            String spaziInterni = "";
+
+            for (int j = 0; j < lato / 2 - i; j++) {
+                spaziIniziali += " ";
+            }
+
+            for (int j = 0; j < 2 * i; j++) {
+                spaziInterni += " ";
+            }
+
+            riga = spaziIniziali + "x" + spaziInterni + "x";
+
+        }
+        return riga;
+    }
 }

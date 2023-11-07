@@ -16,6 +16,7 @@ public class TestPoligoniRegolari {
         System.out.println(g1.toString());
         System.out.println(r1.disegno('x'));
         System.out.println(q1.disegno('x'));
+        System.out.println(e1.disegno('x'));
     }
 
 }
