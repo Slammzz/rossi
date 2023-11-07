@@ -17,4 +17,7 @@ public class Quadrato extends PoligonoRegolare{
     public float apotema(){
         return getLLati()/2;
     }
+    public String toString(){
+        return "Rombo con lunghezza lati: "+getLLati();
+    }
 }

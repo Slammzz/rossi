@@ -17,4 +17,7 @@ public class Pentagono extends PoligonoRegolare{
     public float apotema(){
         return (float) (super.getLLati() * 0.688);
     }
+    public String toString(){
+        return "Pentagono con lunghezza lati: "+getLLati();
+    }
 }

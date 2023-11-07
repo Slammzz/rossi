@@ -16,4 +16,7 @@ public class Esagono extends PoligonoRegolare{
     public float apotema(){
         return (float) (0.86*getLLati());
     }
+    public String toString(){
+        return "Esagono con lunghezza lati: "+getLLati();
+    }
 }

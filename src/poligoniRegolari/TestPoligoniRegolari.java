@@ -4,6 +4,7 @@ public class TestPoligoniRegolari {
     public static void main(String[] args) {
         GestionePoligoni g1 = new GestionePoligoni(6);
 
+        //PoligonoRegolare pol1 = new PoligonoRegolare();
         Quadrato q1 = new Quadrato(3);
         Rombo r1 = new Rombo(5, 11,9);
         Pentagono p1 = new Pentagono(2);

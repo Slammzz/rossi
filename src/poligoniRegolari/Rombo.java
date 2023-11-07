@@ -23,4 +23,7 @@ public class Rombo extends PoligonoRegolare{
     public float getDMag(){
         return dMag;
     }
+    public String toString(){
+        return "Quadrato con lunghezza lati: "+getLLati();
+    }
 }
