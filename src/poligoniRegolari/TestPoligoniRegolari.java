@@ -5,7 +5,7 @@ public class TestPoligoniRegolari {
         GestionePoligoni g1 = new GestionePoligoni(6);
 
         //PoligonoRegolare pol1 = new PoligonoRegolare();
-        Quadrato q1 = new Quadrato(3);
+        Quadrato q1 = new Quadrato(7);
         Rombo r1 = new Rombo(5, 11,9);
         Pentagono p1 = new Pentagono(2);
         Esagono e1 = new Esagono(23);
@@ -14,6 +14,8 @@ public class TestPoligoniRegolari {
         g1.inserisciPoligono(p1);
         g1.inserisciPoligono(e1);
         System.out.println(g1.toString());
+        System.out.println(r1.disegno('x'));
+        System.out.println(q1.disegno('x'));
     }
 
 }
