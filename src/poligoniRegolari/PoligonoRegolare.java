@@ -1,6 +1,6 @@
 package poligoniRegolari;
 
-public class PoligonoRegolare {
+public abstract class PoligonoRegolare {
     private int nLati;
     private float lLati;
 
@@ -30,10 +30,7 @@ public class PoligonoRegolare {
     public float perimetro(){
         return nLati*lLati;
     }
-    /*
-    public float area(){
 
-    }
+    public abstract float area();
 
-     */
 }
