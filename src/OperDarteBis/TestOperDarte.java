@@ -1,4 +1,4 @@
-package OperDarteBis.OperDarte;
+package OperDarteBis;
 
 public class TestOperDarte {
     public static void main(String[] args) {

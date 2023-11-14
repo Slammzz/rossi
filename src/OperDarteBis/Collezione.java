@@ -1,4 +1,4 @@
-package OperDarteBis.OperDarte;
+package OperDarteBis;
 
 public class Collezione {
     private String nome;

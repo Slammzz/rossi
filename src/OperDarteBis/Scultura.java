@@ -1,4 +1,4 @@
-package OperDarteBis.OperDarte;
+package OperDarteBis;
 
 public class Scultura extends OperaArte {
     private double lunghezza;

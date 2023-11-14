@@ -1,4 +1,4 @@
-package OperDarteBis.OperDarte;
+package OperDarteBis;
 
 public class Quadro extends OperaArte {
     private double lunghezza;

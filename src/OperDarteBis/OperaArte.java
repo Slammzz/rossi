@@ -1,4 +1,4 @@
-package OperDarteBis.OperDarte;
+package OperDarteBis;
 
 public abstract class OperaArte {
     protected String titolo;
