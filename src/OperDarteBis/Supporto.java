@@ -13,5 +13,29 @@ public class Supporto {
         this.materiale=materiale;
     }
 
+    public String getMateriale() {
+        return materiale;
+    }
 
+    public double getProfondita() {
+        return profondita;
+    }
+
+    public double getLunghezza() {
+        return lunghezza;
+    }
+
+    public double getLarghezza() {
+        return larghezza;
+    }
+
+    @Override
+    public String toString() {
+        return "Supporto{" +
+                "materiale='" + materiale + '\'' +
+                ", profondita=" + profondita +
+                ", lunghezza=" + lunghezza +
+                ", larghezza=" + larghezza +
+                '}';
+    }
 }
