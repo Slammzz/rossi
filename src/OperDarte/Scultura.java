@@ -15,4 +15,11 @@ public class Scultura extends OperaArte{
     public double printIngombro() {
         return profondita*larghezza*lunghezza;
     }
+
+    @Override
+    public String toString() {
+        return "ARTISTA: "+ artista + " TITOLO: " + titolo +
+                " LUNGHEZZA: " + lunghezza +
+                " LARGHEZZA: " + larghezza + " PROFONDITA': "+ profondita;
+    }
 }

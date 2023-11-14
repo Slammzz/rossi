@@ -10,7 +10,6 @@ public class Collezione {
 
     public Collezione(String nome, String luogo, int lung){
         this.luogo=luogo;
-        this.opere=opere;
         opere = new OperaArte[lung];
         dimLog = 0;
     }
@@ -21,9 +20,12 @@ public class Collezione {
     }
 
     public String stampaCollezzione() {
-        return "Collezione{" +
-                "opere=" + Arrays.toString(opere) +
-                '}';
+        String s = "||| COLLEZIONE |||\n";
+        for (int i = 0; i<dimLog; i++){
+            s+=opere[i].toString()+"\n";
+        }
+        return s;
+
     }
 
     public String stampaIngombro(int i){

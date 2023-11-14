@@ -15,4 +15,5 @@ public abstract class OperaArte {
     public boolean equals(Object obj) {
         return super.equals(obj);
     }
+    public String toString;
 }

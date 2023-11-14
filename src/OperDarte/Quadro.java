@@ -14,4 +14,13 @@ public class Quadro extends OperaArte{
     public double printIngombro() {
         return lunghezza*larghezza;
     }
+
+    @Override
+    public String toString() {
+        return  "ARTISTA: "+ artista + " TITOLO: " + titolo +
+                " LUNGHEZZA: " + lunghezza +
+                " LARGHEZZA: " + larghezza ;
+
+
+    }
 }
