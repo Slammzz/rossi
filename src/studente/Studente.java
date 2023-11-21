@@ -1,46 +1,15 @@
-package classeStudenti;
+package studente;
 
-public class Studente {
-    private String cognome;
-    private String nome;
+public class Studente extends Persona implements Cloneable {
 
-    public Studente(String cognome, String nome)throws Exception{
-        try{
-            setCognome(cognome);
-            setNome(nome);
-        }catch (Exception e){
-            throw new Exception(e.getMessage());
-        }
+
+    public Studente(String cognome, String nome, String codFisc, String dataDiNascita)throws Exception{
+        super(cognome,nome,codFisc,dataDiNascita);
 
     }
 
-    public Studente(Studente s){
-        this.cognome=s.cognome;
-        this.nome=s.nome;
-    }
 
-    public String getCognome() {
-        return cognome;
-    }
 
-    public void setCognome(String cognome)throws Exception {
-        if(cognome.length()<2){
-            throw new Exception("Il cognome è troppo corto");
-        }
-        if(stringaValida(cognome)==true){
-            this.cognome = cognome.trim();
-        }
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome)throws Exception {
-        if(stringaValida(nome)==true){
-            this.nome = nome.trim();
-        }
-    }
 
     private boolean stringaValida(String s)throws Exception{
         try {
@@ -82,12 +51,27 @@ public class Studente {
 
     @Override
     public String toString() {
-        return "Studente{" +
-                "cognome='" + cognome + '\'' +
-                ", nome='" + nome + '\'' +
-                '}';
+        return super.toString();
     }
 
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+    }
 }
 
