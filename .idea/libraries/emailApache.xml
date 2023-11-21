@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="emailApache">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/emailApache.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

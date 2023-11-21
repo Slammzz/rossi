@@ -9,5 +9,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-script-runtime:1.7.10" level="project" />
+    <orderEntry type="library" name="Email" level="project" />
+    <orderEntry type="library" name="emailApache" level="project" />
+    <orderEntry type="library" name="emailApache (2)" level="project" />
   </component>
 </module>

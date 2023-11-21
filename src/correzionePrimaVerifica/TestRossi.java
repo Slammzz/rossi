@@ -18,7 +18,7 @@ public class TestRossi {
             else {
                 System.out.println("non sono omonimi");
             }
-            Prenotazione pre1 = new Prenotazione(p2, "29/01/2226", "01:01:02");
+            Prenotazione pre1 = new Prenotazione(p2, "29/01/2226", "01:01:02","samuel.rossi@buonarroti.tn.it");
             System.out.println(pre1.toString());
         }catch (NullPointerException e){
             System.out.println(e);
