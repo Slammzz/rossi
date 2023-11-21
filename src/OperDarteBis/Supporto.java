@@ -1,24 +1,14 @@
 package OperDarteBis;
 
 public class Supporto {
-    private String materiale;
-    private double profondita;
     private double lunghezza;
     private double larghezza;
+    private double profondita;
 
-    public Supporto(String materiale, double lunghezza, double larghezza, double profondita){
-        this.larghezza=larghezza;
-        this.lunghezza=lunghezza;
-        this.profondita=profondita;
-        this.materiale=materiale;
-    }
-
-    public String getMateriale() {
-        return materiale;
-    }
-
-    public double getProfondita() {
-        return profondita;
+    public Supporto(double lunghezza, double larghezza, double profondita) {
+        this.lunghezza = lunghezza;
+        this.larghezza = larghezza;
+        this.profondita = profondita;
     }
 
     public double getLunghezza() {
@@ -29,13 +19,16 @@ public class Supporto {
         return larghezza;
     }
 
+    public double getProfondita() {
+        return profondita;
+    }
+
     @Override
     public String toString() {
-        return "Supporto{" +
-                "materiale='" + materiale + '\'' +
-                ", profondita=" + profondita +
-                ", lunghezza=" + lunghezza +
-                ", larghezza=" + larghezza +
-                '}';
+        return "Supporto: Lunghezza=" + lunghezza + ", Larghezza=" + larghezza + ", Profondita=" + profondita;
+    }
+
+    public double printIngombro() {
+        return lunghezza * larghezza * profondita;
     }
 }

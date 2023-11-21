@@ -2,13 +2,49 @@ package OperDarteBis;
 
 public class TestOperDarte {
     public static void main(String[] args) {
-        Quadro q1 = new Quadro("Michelangelo","Creazione di Adamo", 20.1, 12.2);
-        Scultura s1 = new Scultura("Michelangelo", "David", 200, 120,30);
-        Collezione c1 = new Collezione("Uffizzi", "Firenze",5);
-        System.out.print(c1.stampaCollezzione());
-        c1.inserisci(q1);
-        c1.inserisci(s1);
-        System.out.println(c1.stampaCollezzione());
-        System.out.println(c1.stampaIngombro(0));
+        try {
+            // Creazione di una cornice
+            Cornice corniceQuadro = new Cornice(2, 2);
+
+            // Creazione di una supporto
+            Supporto supportoScultura = new Supporto(3, 3, 1);
+            Supporto supportoScultura2 = new Supporto(15, 10, 5);
+
+            // Creazione di una collezione
+            Collezione collezione = new Collezione("Esposizione d'Arte", "Roma", 5);
+
+            try {
+                // Creazione di un quadro con cornice
+                Quadro op1 = new Quadro(25, 15, "Gianni", "Natura Morta", corniceQuadro);
+                collezione.inserisci(op1);
+            } catch (Exception e) {
+                System.out.println("Errore nella creazione del quadro: " + e.getMessage());
+            }
+
+            try {
+                // Creazione di una scultura con supporto
+                Scultura op2 = new Scultura(191.5, 60, 40, "Donatello", "David", supportoScultura);
+                collezione.inserisci(op2);
+            } catch (Exception e) {
+                System.out.println("Errore nella creazione della scultura: " + e.getMessage());
+            }
+
+            try {
+                // Creazione di una scultura deperibile
+                SculturaDeperibile op3 = new SculturaDeperibile(100, 50, 30, "Michelangelo", "Pietà", supportoScultura, 1917, 0.01f);
+                collezione.inserisci(op3);
+            } catch (Exception e) {
+                System.out.println("Errore nella creazione della scultura deperibile: " + e.getMessage());
+            }
+
+            // Stampa della collezione
+            System.out.println(collezione.stampaCollezione());
+
+            // Stampa dell'ingombro totale
+            System.out.println(collezione.stampaIngombro());
+
+        } catch (Exception e) {
+            System.out.println("Errore generale: " + e.getMessage());
+        }
     }
 }
