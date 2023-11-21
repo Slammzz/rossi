@@ -35,7 +35,7 @@ public class Collezione {
     }
 
     public String stampaCollezione() {
-        String result = "\n\nCollezione: " + nome + " - Luogo: " + luogo + "\nOpere:\n";
+        String result = "\n\nCollezione: " + nome + " - Luogo: " + luogo +"\n\n";
         for (int i = 0; i < dimLog; i++) {
             result += opere[i].toString() + "\n";
         }
@@ -47,7 +47,8 @@ public class Collezione {
         for (int i = 0; i < dimLog; i++) {
             ingombroTotale += opere[i].printIngombro();
         }
-        return ("\n\nIngombro totale della collezione: " + ingombroTotale + " metri quadrati");
+
+        return ("\n\nIngombro totale della collezione: " +(float)ingombroTotale + " metri quadrati");
     }
 
 }
