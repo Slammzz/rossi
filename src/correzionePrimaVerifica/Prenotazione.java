@@ -1,9 +1,10 @@
 package correzionePrimaVerifica;
 
 public class Prenotazione {
-    public Persona persona;
-    public String data;
-    public String ora;
+    private Persona persona;
+    private String data;
+    private String ora;
+
 
     public Prenotazione(){
 
