@@ -80,6 +80,7 @@ public class Studente {
         return true;
     }
 
+
     @Override
     public String toString() {
         return "Studente{" +
@@ -87,6 +88,7 @@ public class Studente {
                 ", nome='" + nome + '\'' +
                 '}';
     }
+
 
 
 }
