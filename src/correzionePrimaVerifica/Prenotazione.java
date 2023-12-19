@@ -1,6 +1,6 @@
 package correzionePrimaVerifica;
 
-import org.apache.commons.validator.routines.EmailValidator;
+
 public class Prenotazione {
     private Persona persona;
     private String data;
@@ -17,7 +17,7 @@ public class Prenotazione {
         setPersona(p);
         setData(d);
         setOra(o);
-        setEmail(e);
+        //setEmail(e);
     }
 
     public void setPersona(Persona persona) throws Exception {
@@ -28,7 +28,7 @@ public class Prenotazione {
         } else
             throw new Exception("L'attributo data non può essere null!");
     }
-
+    /*
     public void setEmail(String email) throws Exception{
         if(EmailValidator.getInstance().isValid(email)){
             this.email=email;
@@ -37,7 +37,7 @@ public class Prenotazione {
             throw new Exception("la eMail non è valida");
         }
     }
-
+    */
     public void setData(String data)throws Exception {
         String giornoString, meseString, annoString ;
         Integer giorno, mese, anno;

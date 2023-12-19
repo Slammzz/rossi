@@ -111,10 +111,7 @@ public class Persona {
         }
     }
 
-    @Override
-    public String toString() {
-        return "[" + cognome + ", " + nome +  ", " + codFisc + ']';
-    }
+
 
     private void controlloNominativi(String nominativo) throws Exception {
         try {
@@ -143,6 +140,69 @@ public class Persona {
             throw new NullPointerException ("L'attributo non può essere null");
         } catch (StringIndexOutOfBoundsException e) {
             throw new StringIndexOutOfBoundsException ("Non è consentito l'utilizzo di più di uno spazio!");
+        }
+    }
+    public String info() throws Exception {
+        String testo;
+
+        if(cognome != null && nome != null && codFisc != null)
+            testo = "[" + cognome + ", " + nome + ", " + codFisc + "]";
+        else
+            throw new Exception("uno o più attributi sono nulli");
+
+        return testo;
+    }
+    @Override
+    public String toString() {
+        try {
+            return info();
+        }
+        catch (Exception e){
+            return null;
+        }
+    }
+
+    @Override
+    protected Persona clone() throws CloneNotSupportedException {
+        Persona p1 = (Persona) super.clone();
+        numeroIstanze ++;
+        return p1;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Boolean verfica = false;
+        if(obj instanceof Persona){
+            Persona p1 = (Persona) obj;
+            if(getCognome().equals(p1.getCognome())&&getNome().equals(p1.getNome())&&getCodFisc().equals(p1.getCodFisc())){
+                verfica = true;
+            }
+        }
+        return verfica;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+
+        if(cognome != null)
+            hash += cognome.hashCode();
+
+        if(nome != null)
+            hash += nome.hashCode();
+
+        if(codFisc != null)
+            hash += codFisc.hashCode();
+
+        return hash;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        try {
+            numeroIstanze--;
+        }catch (Exception e){
+            super.finalize();
         }
     }
 }
