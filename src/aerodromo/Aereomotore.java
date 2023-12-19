@@ -1,4 +1,4 @@
-package aereomotore;
+package aerodromo;
 
 import java.util.Objects;
 
