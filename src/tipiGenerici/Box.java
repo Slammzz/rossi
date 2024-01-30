@@ -17,6 +17,15 @@ public class Box <T>{
         this.t = t;
     }
 
+    //per capire il tipo
+    public Class tipo(){
+        return t.getClass();
+    }
+
+    static public <T> T verificaTipo(T valore){
+
+        return (T)valore.getClass();
+    }
     @Override
     public String toString() {
         return "Box{" +
