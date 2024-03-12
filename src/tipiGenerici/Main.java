@@ -6,6 +6,6 @@ public class Main {
         System.out.println(box.get());
         System.out.println(box.toString());
         System.out.println(box.tipo());
-        System.out.println(Box.verificaTipo('S'));
+        System.out.println(Box.verificaTipo(box));
     }
 }
