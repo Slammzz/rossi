@@ -2,6 +2,8 @@ package studente;
 
 import java.time.ZoneId;
 import java.time.LocalDate;
+import java.util.Comparator;
+
 public class Persona {
     private String cognome;
     private String nome;
@@ -148,6 +150,17 @@ public class Persona {
         } catch (StringIndexOutOfBoundsException e) {
             throw new StringIndexOutOfBoundsException ("Non è consentito l'utilizzo di più di uno spazio!");
         }
+    }
+
+    /*
+    public int CompareTo(Persona p){
+        return Integer.compare(calcolaEta(), p.calcolaEta());
+    }
+
+     */
+
+    public int compareTo(Persona altraPersona) {
+        return this.dataDiNascita.compareTo(altraPersona.dataDiNascita);
     }
 }
 

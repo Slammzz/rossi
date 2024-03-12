@@ -1,12 +1,16 @@
 package liste;
+import com.sun.deploy.perf.PerfRollup;
 import sun.rmi.runtime.NewThreadAction;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-
+import studente.Persona;
+import java.util.ArrayList;
+import java.util.Collections;
 public class Main {
     public static void main(String[] args) {
+        /*
         ArrayList<String> lista = new ArrayList<>();
         lista.add("ciao");
 
@@ -82,8 +86,34 @@ public class Main {
 
         //tiene
         lista2.ensureCapacity(2);
+    */
+        //esercizio (obiettivo riordinare una lista con elementi non wrapped)
+
+        try {
+            Persona p1 = new Persona("Rossi","Samuel","GNFBLD72B29E012Y", "29/01/2006");
+            Persona p2 = new Persona("Rizzonelli","Emiliano","GNFBLD72B29E112Y", "18/01/2006");
+            Persona p3 = new Persona("Largher","Nicola","GNFBLD72B29E012Y", "11/01/2006");
+
+            ArrayList<Persona> persone = new ArrayList<>();
+            persone.add(p2);
+            persone.add(p1);
+            persone.add(p3);
+
+
+
+
+            for(Persona p: persone){
+                System.out.println(p.toString());
+            }
+            Collections.sort(persone);
+
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
 
     }
 
+
 }
+
 
