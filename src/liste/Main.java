@@ -2,6 +2,8 @@ package liste;
 import sun.rmi.runtime.NewThreadAction;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -59,6 +61,29 @@ public class Main {
         for(int i=0; i < lista.size(); i++){
             System.out.println(lista.get(i));
         }
+        lista.add("UE");
+        lista.add("Good");
+
+        //returna una nuova lista con tutti gli elementi all'interno del range
+        System.out.println(lista.subList(1,3));
+
+        //inserisco una lista all'interno dell'altra
+        System.out.println(lista.addAll(lista));
+
+        //controlla se c'è una lista all'interno dell'altra
+        System.out.println(lista.containsAll(lista));
+
+        System.out.println(lista.removeAll(lista));
+
+        //prove
+        Collection<? extends String> es = Collections.singleton("yo");
+        lista.addAll(es);
+        System.out.println(lista.toString());
+
+        //tiene
+        lista2.ensureCapacity(2);
+
     }
+
 }
 
